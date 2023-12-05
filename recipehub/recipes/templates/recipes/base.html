@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recipe Hub</title>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+{% load static %}
+<header>
+    <a href="{% url 'recipes:recipe_list' %}"><img src="{% static 'logo4.PNG' %}" alt="Logo" class="img-fluid"
+                                                   style="width: 10%; margin: 0 auto; display: block;"></a>
+</header>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'recipes:recipe_list' %}">Recipes</a>
+            <a class="nav-link" href="{% url 'recipes:update_profile' %}">Update Profile</a>
+        </li>
+    </ul>
+</nav>
+<main class="container">
+    {% block content %}
+
+    {% endblock %}
+</main>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+</html>

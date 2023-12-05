@@ -1,0 +1,10 @@
+{% extends 'recipes/base.html' %}
+
+{% block content %}
+    <h1>{{ recipe.title }}</h1>
+    <img src="{{ recipe.image.url }}" alt="{{ recipe.title }}" width="300">
+    <p>Author: {{ recipe.author.username }}</p>
+    <p>Ingredients: {{ recipe.ingredients }}</p>
+    <p>Instructions: {{ recipe.instructions }}</p>
+    <p>Created at: {{ recipe.created_at }}</p>
+{% endblock %}
